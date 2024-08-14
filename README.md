@@ -6,7 +6,6 @@ This project is a web application built with TypeScript, MongoDB, Node.js, and B
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Scripts](#scripts)
 - [Project Structure](#project-structure)
 - [Technologies](#technologies)
 - [Contributing](#contributing)
@@ -23,17 +22,26 @@ This project is a web application built with TypeScript, MongoDB, Node.js, and B
 
 2. **Install dependencies using Bun:**
 
-    ```bash
-    bun install
-    ```
+#MacOS
+ ```bash
+curl -fsSL https://bun.sh/install | bash 
+```
+#Windows
+ ```bash
+powershell -c "irm bun.sh/install.ps1|iex"
+```
+```bash
+bun install
+```
+
 
 3. **Set up your environment variables:**
 
     Create a `.env` file in the root directory and configure the following variables:
 
     ```plaintext
-    MONGODB_URI=<your-mongodb-connection-string>
-    PORT=<your-preferred-port>
+   DB_CONNECT_USERNAME=
+   DB_CONNECT_PASSWORD=
     ```
 
 ## Usage
@@ -41,29 +49,11 @@ This project is a web application built with TypeScript, MongoDB, Node.js, and B
 1. **Start the development server:**
 
     ```bash
-    bun run dev
+    npm install
     ```
-
-    The server will start on the port specified in the `.env` file.
-
-2. **Build the project for production:**
-
-    ```bash
-    bun run build
+     ```bash
+    npm start
     ```
-
-3. **Run the production build:**
-
-    ```bash
-    bun run start
-    ```
-
-## Scripts
-
-- **`bun run dev`**: Starts the development server with hot-reloading.
-- **`bun run build`**: Compiles TypeScript files and prepares the project for production.
-- **`bun run start`**: Runs the compiled project in production mode.
-- **`bun run lint`**: Lints the TypeScript code using ESLint.
 
 ## Project Structure
 
