@@ -11,6 +11,7 @@ interface IProduct extends Document {
 
 const ProductSchema: Schema<IProduct> = new mongoose.Schema(
     {
+    
         name: {
             type: String,
             default: "string",
